@@ -193,6 +193,7 @@ class AddToHomeScreen {
     var ret;
 
     if (this.isStandAlone()) {
+      console.log("OOoods");
       ret = new AddToHomeScreen.ReturnObj({
         isStandAlone: true,
         canBeStandAlone: true,
@@ -200,6 +201,7 @@ class AddToHomeScreen {
       });
       return ret;
     } else if (this._hasReachedMaxModalDisplayCount()) {
+      console.log("p22323322");
       ret = new AddToHomeScreen.ReturnObj({
         isStandAlone: null,
         canBeStandAlone: null,
@@ -220,6 +222,7 @@ class AddToHomeScreen {
 
       if (this.isDeviceIOS()) {
         // ios
+        console.log("hehehehe");
         if (this.isBrowserIOSSafari()) {
           ret = new AddToHomeScreen.ReturnObj({
             isStandAlone: false,
@@ -270,6 +273,7 @@ class AddToHomeScreen {
           }
         }
       } else if (this.isDeviceAndroid()) {
+        console.log("ohohooh");
         // android
         if (this.isBrowserAndroidChrome()) {
           ret = new AddToHomeScreen.ReturnObj({
@@ -301,6 +305,7 @@ class AddToHomeScreen {
         }
       } else {
         ddd = true;
+        console.log("Huhu");
         // // desktop
         // ret = new AddToHomeScreen.ReturnObj({
         //   isStandAlone: false,
@@ -316,7 +321,9 @@ class AddToHomeScreen {
         // }
       }
 
-      // if (ddd) return;
+      if (ddd) return;
+
+      console.log("hehehe");
 
       document.body.appendChild(container);
       this._registerCloseListener();
